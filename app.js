@@ -12,6 +12,11 @@ const loopLabel = document.getElementById('loopLabel');
 const statusEl = document.getElementById('status');
 const swatches = [...document.querySelectorAll('.swatch')];
 
+// The shared button style would otherwise paint every swatch the same dark color.
+swatches.forEach(b => {
+  b.style.background = b.dataset.color;
+});
+
 // Pentatonic scale over two octaves, starting at middle C.
 const PENTA = [0, 2, 4, 7, 9];
 const BASE_HZ = 261.63;
