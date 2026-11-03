@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doodle Music</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Doodle Music</h1>
+    <p>Left to right is time. Higher on the canvas is higher pitch. Color picks the instrument.</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <button id="playBtn" class="primary">Start</button>
+
+      <div class="swatches" id="swatches">
+        <button class="swatch active" data-color="#e0524a" data-wave="sine" aria-label="Sine (red)"></button>
+        <button class="swatch" data-color="#3d7fe0" data-wave="square" aria-label="Square (blue)"></button>
+        <button class="swatch" data-color="#3fb37f" data-wave="triangle" aria-label="Triangle (green)"></button>
+        <button class="swatch" data-color="#e8b43a" data-wave="sawtooth" aria-label="Sawtooth (yellow)"></button>
+      </div>
+
+      <label class="loop-control">
+        Loop <input type="range" id="loopLen" min="4" max="16" value="8">
+        <span id="loopLabel">8 s</span>
+      </label>
+
+      <button id="undoBtn">Undo</button>
+      <button id="clearBtn">Clear</button>
+      <button id="randomBtn">Random</button>
+    </div>
+
+    <canvas id="board" width="1000" height="500" aria-label="Drawing canvas"></canvas>
+    <p id="status" class="status"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #15171c;
+  color: #e9ecf2;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.3rem;
+  font-size: 1.8rem;
+}
+
+header p {
+  margin: 0;
+  color: #9aa3b2;
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  font: inherit;
+  color: #e9ecf2;
+  background: #262a33;
+  border: 1px solid #3a4050;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2f3440;
+}
+
+button.primary {
+  background: #3d7fe0;
+  border-color: #3d7fe0;
+  font-weight: 600;
+  min-width: 90px;
+}
+
+button.primary:hover {
+  background: #4a8cf0;
+}
+
+.swatches {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.swatch {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.swatch.active {
+  border-color: #ffffff;
+}
+
+.loop-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #9aa3b2;
+}
+
+.loop-control span {
+  min-width: 3ch;
+  color: #e9ecf2;
+}
+
+#board {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #1d2028;
+  border: 1px solid #3a4050;
+  border-radius: 10px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.status {
+  text-align: center;
+  color: #9aa3b2;
+  min-height: 1.4em;
+  margin: 0.8rem 0 0;
+}
